@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthyLife – Your Wellness Companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">🌿 Healthy<span>Life</span></a>
+      <nav>
+        <a href="#tips">Tips</a>
+        <a href="#bmi">BMI</a>
+        <a href="#chat">Chatbot</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Live healthier, <span>one habit</span> at a time.</h1>
+        <p>Get practical tips on nutrition, exercise, sleep, and mental wellbeing — and ask our friendly health chatbot anything, anytime.</p>
+        <div class="hero-buttons">
+          <a href="#chat" class="btn btn-primary">💬 Chat with HealthBot</a>
+          <a href="#bmi" class="btn btn-outline">Check your BMI</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="stat"><span>💧</span><div><b>8 glasses</b><small>water per day</small></div></div>
+        <div class="stat"><span>🚶</span><div><b>10,000 steps</b><small>daily activity goal</small></div></div>
+        <div class="stat"><span>😴</span><div><b>7–9 hours</b><small>sleep for adults</small></div></div>
+        <div class="stat"><span>🥦</span><div><b>5 portions</b><small>fruit &amp; vegetables</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tips -->
+  <section id="tips" class="section">
+    <div class="container">
+      <h2 class="section-title">Healthy Living Tips</h2>
+      <p class="section-sub">Small, consistent changes make the biggest difference.</p>
+      <div class="cards">
+        <article class="card"><div class="card-icon">🥗</div><h3>Nutrition</h3><p>Fill half your plate with vegetables, choose whole grains, and limit sugary drinks and ultra-processed food.</p></article>
+        <article class="card"><div class="card-icon">🏃</div><h3>Exercise</h3><p>Aim for 150 minutes of moderate activity per week plus 2 days of strength training.</p></article>
+        <article class="card"><div class="card-icon">🌙</div><h3>Sleep</h3><p>Keep a consistent schedule, avoid screens an hour before bed, and keep your room cool and dark.</p></article>
+        <article class="card"><div class="card-icon">🧠</div><h3>Mental Health</h3><p>Take breaks, practise deep breathing, stay connected with people, and ask for help when you need it.</p></article>
+        <article class="card"><div class="card-icon">💧</div><h3>Hydration</h3><p>Drink water regularly through the day — more when it's hot or when you exercise.</p></article>
+        <article class="card"><div class="card-icon">🚭</div><h3>Avoid Harmful Habits</h3><p>Avoid smoking, limit alcohol, and get regular health check-ups.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BMI -->
+  <section id="bmi" class="section section-alt">
+    <div class="container bmi-wrap">
+      <div>
+        <h2 class="section-title left">BMI Calculator</h2>
+        <p class="section-sub left">Body Mass Index is a quick screening tool for weight category. It doesn't measure body fat directly, so treat it as a rough guide.</p>
+      </div>
+      <form id="bmi-form" class="bmi-form">
+        <label>Weight (kg)<input type="number" id="weight" min="1" step="0.1" placeholder="e.g. 65" required /></label>
+        <label>Height (cm)<input type="number" id="height" min="1" step="0.1" placeholder="e.g. 170" required /></label>
+        <button type="submit" class="btn btn-primary">Calculate</button>
+        <div id="bmi-result" class="bmi-result" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Chatbot -->
+  <section id="chat" class="section">
+    <div class="container">
+      <h2 class="section-title">Ask HealthBot</h2>
+      <p class="section-sub">Ask about diet, exercise, sleep, stress, common symptoms and more.</p>
+
+      <div class="chatbox">
+        <div class="chat-header">
+          <div class="bot-avatar">🤖</div>
+          <div>
+            <b>HealthBot</b>
+            <small><span class="dot"></span> <span id="bot-status">Online</span></small>
+          </div>
+          <button id="clear-chat" class="clear-btn" title="Clear chat">🗑️ Clear</button>
+        </div>
+
+        <div id="messages" class="messages" aria-live="polite"></div>
+
+        <div id="quick-replies" class="quick-replies"></div>
+
+        <form id="chat-form" class="chat-input">
+          <input id="user-input" type="text" placeholder="Type your health question..." autocomplete="off" />
+          <button type="submit" aria-label="Send">➤</button>
+        </form>
+      </div>
+
+      <p class="disclaimer">⚠️ HealthBot gives general wellness information only and is not a substitute for professional medical advice. In an emergency, call your local emergency number immediately.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© 2026 HealthyLife · Built for a healthier you 🌿</div>
+  </footer>
+
+  <script src="chatbot.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
